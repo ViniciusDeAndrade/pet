@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn verify'
-                sh 'mvn clean compile'
+                sh 'mvn clean install'
+                sh 'mvn compile'
             }
         }
         stage('test'){
